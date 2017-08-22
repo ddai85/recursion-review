@@ -18,11 +18,8 @@ var stringifyJSON = function(obj) {
   if (typeof obj === 'string') {
     return '"' + obj + '"';
 
-  } else if (typeof obj === 'number') {
+  } else if (typeof obj === 'number' || typeof obj === 'boolean') {
     return obj + '';   
-
-  } else if (typeof obj === 'boolean') {
-    return obj + '';
     
   } else if (typeof obj === 'function' || typeof obj === 'undefined') {
     return undefined;       
